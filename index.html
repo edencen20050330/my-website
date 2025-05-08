@@ -6,14 +6,22 @@
   <title>Eden Cen | Personal Site</title>
 
   <style>
+    /* ✅ 引入自定义字体 timeless.otf */
+    @font-face {
+      font-family: 'Timeless';
+      src: url('timeless.otf') format('opentype');
+      font-display: swap;
+    }
+
     body {
       margin: 0;
+      font-family: 'Timeless', serif;
+      font-size: 1.2rem; /* ✅ 让整体字体更大 */
       background-image: url("white.jpeg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      font-family: 'Cochin', serif; /* ✅ 使用系统字体 Cochin */
       color: white;
     }
 
@@ -32,7 +40,7 @@
     }
 
     nav h1 {
-      font-size: 1.5rem;
+      font-size: 2rem; /* 放大标题字体 */
       margin-bottom: 30px;
     }
 
@@ -40,8 +48,9 @@
       display: block;
       color: #ccc;
       text-decoration: none;
-      margin-bottom: 15px;
-      font-weight: 500;
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 1.1rem;
       transition: 0.2s ease;
     }
 
@@ -52,14 +61,21 @@
 
     .main {
       flex: 1;
-      padding: 50px;
+      padding: 60px;
       background-color: rgba(0, 0, 0, 0.3);
       overflow-y: auto;
     }
 
     .main h2 {
+      font-size: 1.8rem;
       color: white;
       border-bottom: 1px solid rgba(255,255,255,0.3);
+      margin-bottom: 20px;
+    }
+
+    .main p, .main li {
+      font-size: 1.2rem;
+      line-height: 1.8;
     }
 
     .main a {
@@ -70,7 +86,7 @@
     footer {
       text-align: center;
       color: #888;
-      font-size: 0.9rem;
+      font-size: 1rem;
       margin-top: 50px;
     }
   </style>
@@ -82,8 +98,8 @@
   <nav>
     <h1>Eden Cen</h1>
     <a href="#about">About</a>
-    <a href="projects.html">Projects</a>    <!-- ✅ 跳转页面 -->
-    <a href="photos.html">Photos</a>       <!-- ✅ 改为 Photos -->
+    <a href="projects.html">Projects</a>
+    <a href="photos.html">Photos</a>
   </nav>
 
   <!-- 右侧主内容 -->
