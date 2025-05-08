@@ -8,7 +8,7 @@
   <style>
     body {
       margin: 0;
-      font-family: serif; /* ✅ 使用系统默认 serif 字体 */
+      font-family: serif;
       font-size: 1.2rem;
       background-image: url("white.jpeg");
       background-size: cover;
@@ -45,6 +45,7 @@
       font-weight: 600;
       font-size: 1.1rem;
       transition: 0.2s ease;
+      cursor: pointer;
     }
 
     nav a:hover {
@@ -90,25 +91,36 @@
   <!-- 左侧导航 -->
   <nav>
     <h1>Eden Cen</h1>
-    <a href="#about">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="photos.html">Photos</a>
+    <a onclick="loadSection('about')">About</a>
+    <a onclick="loadSection('projects')">Projects</a>
+    <a onclick="loadSection('photos')">Photos</a>
   </nav>
 
   <!-- 右侧主内容 -->
-  <div class="main">
-    <section id="about">
+  <div class="main" id="main-content">
+    <!-- 初始加载内容 -->
+    <section>
       <h2>About Me</h2>
-      <p>
-        I'm Eden. Welcome to my website.
-      </p>
+      <p>I'm Eden. Welcome to my website.</p>
+      <footer>
+        &copy; 2025 Eden Cen • Built with HTML & CSS
+      </footer>
     </section>
-
-    <footer>
-      &copy; 2025 Eden Cen • Built with HTML & CSS
-    </footer>
   </div>
 </div>
+
+<script>
+  async function loadSection(name) {
+    try {
+      const res = await fetch(name + '.html');
+      const html = await res.text();
+      document.getElementById('main-content').innerHTML = html;
+    } catch (err) {
+      document.getElementById('main-content').innerHTML =
+        '<section><h2>Error</h2><p>Failed to load section: ' + name + '</p></section>';
+    }
+  }
+</script>
 
 </body>
 </html>
