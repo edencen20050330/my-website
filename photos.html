@@ -1,4 +1,33 @@
 <section>
   <h2>Photos</h2>
-  <img src="myphoto.jpeg" alt="My Photo" style="max-width:90%; border-radius:12px;">
+  <div class="photo-grid">
+    <!-- 插入多张照片 -->
+    <img src="IMG_1235.jpeg" alt="Photo 1">
+    <img src="IMG_1236.jpeg" alt="Photo 2">
+    <img src="IMG_1237.jpeg" alt="Photo 3">
+    <img src="IMG_1238.jpeg" alt="Photo 4">
+    <img src="IMG_1239.jpeg" alt="Photo 5">
+    <img src="IMG_1240.jpeg" alt="Photo 6">
+    <img src="IMG_1241.jpeg" alt="Photo 7">
+    <img src="IMG_1242.jpeg" alt="Photo 8">
+    <img src="IMG_1243.jpeg" alt="Photo 9">
+    <!-- 可以继续添加更多 -->
+  </div>
 </section>
+
+<style>
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 每行5列 */
+    gap: 12px; /* 间距 */
+    margin-top: 20px;
+  }
+
+  .photo-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+</style>
