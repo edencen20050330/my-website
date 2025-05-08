@@ -4,49 +4,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Eden Cen | Personal Site</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- 引入自定义字体 DJGROSS -->
   <style>
+    @font-face {
+      font-family: 'DJGROSS';
+      src: url('DJGROSS.ttf') format('truetype');
+      font-display: swap;
+    }
+
     body {
-  margin: 0;
-  background-image: url("white.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: 'Inter', sans-serif;
-  color: white;
-}
+      margin: 0;
+      background-image: url("white.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: 'DJGROSS', sans-serif;
+      color: white;
+    }
 
-.layout {
-  display: flex;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4); /* 半透明遮罩 */
-}
+    .layout {
+      display: flex;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
 
-nav {
-  width: 220px;
-  background-color: rgba(0, 0, 0, 0.6); /* 半透明深色导航栏 */
-  color: white;
-  padding: 40px 20px;
-  box-sizing: border-box;
-}
+    nav {
+      width: 220px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
 
-.main {
-  flex: 1;
-  padding: 50px;
-  background-color: rgba(0, 0, 0, 0.3); /* 主内容也透明 */
-  overflow-y: auto;
-}
+    nav h1 {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
 
-.main h2 {
-  color: white;
-  border-bottom: 1px solid rgba(255,255,255,0.3);
-}
+    nav a {
+      display: block;
+      color: #ccc;
+      text-decoration: none;
+      margin-bottom: 15px;
+      font-weight: 500;
+      transition: 0.2s ease;
+    }
 
-.main a {
-  color: #add8ff;
-  text-decoration: underline;
-}
+    nav a:hover {
+      color: white;
+      transform: translateX(5px);
+    }
+
+    .main {
+      flex: 1;
+      padding: 50px;
+      background-color: rgba(0, 0, 0, 0.3);
+      overflow-y: auto;
+    }
+
+    .main h2 {
+      color: white;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .main a {
+      color: #add8ff;
+      text-decoration: underline;
+    }
 
     footer {
       text-align: center;
