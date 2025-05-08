@@ -2,113 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>imEdenCen | Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eden Cen | Personal Site</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #fefefe;
+      font-family: 'Inter', sans-serif;
       color: #333;
-      line-height: 1.6;
     }
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
+    .layout {
+      display: flex;
+      height: 100vh;
     }
 
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.2em;
-    }
-
-    header p {
-      color: #666;
-      font-size: 1.1rem;
-    }
-
+    /* 左侧侧边栏 */
     nav {
-      margin-top: 20px;
+      width: 220px;
+      background-color: #1a1a1a;
+      color: white;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
     }
 
     nav a {
-      margin: 0 15px;
+      display: block;
+      color: #ccc;
       text-decoration: none;
-      color: #3366cc;
-      font-weight: bold;
+      margin-bottom: 15px;
+      font-weight: 500;
+      transition: 0.2s ease;
     }
 
     nav a:hover {
-      color: #003366;
-      text-decoration: underline;
+      color: white;
+      transform: translateX(5px);
     }
 
-    section {
-      margin-top: 50px;
+    /* 主内容区 */
+    .main {
+      flex: 1;
+      padding: 50px;
+      background-color: #f9f9f9;
+      overflow-y: auto;
     }
 
-    section h2 {
-      font-size: 1.8rem;
-      color: #222;
+    .main section {
+      margin-bottom: 80px;
+    }
+
+    .main h2 {
+      font-size: 2rem;
       border-bottom: 2px solid #eee;
       padding-bottom: 10px;
+      margin-bottom: 20px;
+      color: #222;
     }
 
-    ul {
-      padding-left: 20px;
-    }
-
-    a {
-      color: #007acc;
-    }
-
-    a:hover {
-      color: #005999;
+    .main p, li {
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
 
     footer {
       text-align: center;
-      margin-top: 80px;
       color: #888;
       font-size: 0.9rem;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <header>
-      <h1>Hi, I'm Eden Cen</h1>
-      <p>Welcome to my personal website!</p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+<div class="layout">
+  <!-- 左侧导航 -->
+  <nav>
+    <h1>Eden Cen</h1>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
+  <!-- 右侧主内容 -->
+  <div class="main">
     <section id="about">
       <h2>About Me</h2>
       <p>
-        I'm a passionate developer, creative designer, and lifelong learner.
-        I enjoy building meaningful digital experiences and exploring new technologies.
+        I'm Eden Cen — a developer, designer, and dreamer. I build meaningful tools, learn constantly, and care deeply about technology and people.
       </p>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
       <ul>
-        <li>🛠️ Portfolio Website - <a href="#">GitHub Repo</a></li>
-        <li>📱 Mobile App Concept - <a href="#">Figma Demo</a></li>
+        <li>🛠️ Personal Portfolio — <a href="#">GitHub Repo</a></li>
+        <li>📱 UX Case Study App — <a href="#">Live Demo</a></li>
       </ul>
     </section>
 
@@ -119,9 +113,10 @@
     </section>
 
     <footer>
-      &copy; 2025 Eden Cen • Built with 💙 HTML & CSS
+      &copy; 2025 Eden Cen • Built with ❤️ HTML & CSS
     </footer>
   </div>
+</div>
 
 </body>
 </html>
