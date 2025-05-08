@@ -58,6 +58,7 @@
       padding: 60px;
       background-color: rgba(0, 0, 0, 0.3);
       overflow-y: auto;
+      min-height: 100vh; /* ✅ 避免加载内容太少时高度收缩 */
     }
 
     .main h2 {
@@ -98,14 +99,7 @@
 
   <!-- 右侧主内容 -->
   <div class="main" id="main-content">
-    <!-- 初始加载内容 -->
-    <section>
-      <h2>About Me</h2>
-      <p>I'm Eden. Welcome to my website.</p>
-      <footer>
-        &copy; 2025 Eden Cen • Built with HTML & CSS
-      </footer>
-    </section>
+    <!-- 初始内容动态加载 -->
   </div>
 </div>
 
@@ -120,6 +114,9 @@
         '<section><h2>Error</h2><p>Failed to load section: ' + name + '</p></section>';
     }
   }
+
+  // 初始自动加载 about 页面
+  window.onload = () => loadSection('about');
 </script>
 
 </body>
