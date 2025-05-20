@@ -1,20 +1,7 @@
 <section>
   <h2>Thoughts</h2>
   <p>
-  Sometimes, I write to organize my thoughts — on learning, building, and being
-  <a href="javascript:void(0)" onclick="promptDiaryAccess()" style="text-decoration: none;">.</a>
+    Sometimes, I write to organize my thoughts — on learning, building, and being
+    <a href="diary.html" style="color:inherit; text-decoration:none;">.</a>
   </p>
 </section>
-
-<script>
-  function promptDiaryAccess() {
-    const correctPassword = "qinhuai";
-    const input = prompt("Enter password to access:");
-
-    if (input === correctPassword) {
-      window.location.href = "https://vine-organ-921.notion.site/my-diary";
-    } else if (input !== null) {
-      alert("Incorrect password");
-    }
-  }
-</script>
