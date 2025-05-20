@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Diary Access</title>
+  <style>
+    body {
+      font-family: serif;
+      background-color: #111;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      font-size: 1.2rem;
+      border-radius: 6px;
+      border: none;
+      margin-bottom: 10px;
+      width: 250px;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 6px;
+      background-color: #444;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #666;
+    }
+
+    .error {
+      color: red;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Enter Password to Access</h2>
+  <input type="password" id="password" placeholder="Enter password..." />
+  <br />
+  <button onclick="checkPassword()">Submit</button>
+
+  <div class="error" id="errorMsg"></div>
+
+  <script>
+    const correctPassword = "qinhuai";
+
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      if (input === correctPassword) {
+        window.location.href = "https://vine-organ-921.notion.site/my-diary";
+      } else {
+        document.getElementById("errorMsg").innerText = "Incorrect password. Try again.";
+      }
+    }
+  </script>
+
+</body>
+</html>
