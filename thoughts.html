@@ -1,6 +1,20 @@
 <section>
   <h2>Thoughts</h2>
   <p>
-    Sometimes, I write to organize my thoughts — on learning, building, and being.
+    Sometimes, I write to organize my thoughts — on learning, building, and being
+    <span onclick="promptDiaryAccess()" style="cursor: pointer; text-decoration: underline;">.</span>
   </p>
 </section>
+
+<script>
+  function promptDiaryAccess() {
+    const correctPassword = "qinhuai";
+    const input = prompt("Enter password to access:");
+
+    if (input === correctPassword) {
+      window.location.href = "https://vine-organ-921.notion.site/my-diary";
+    } else if (input !== null) {
+      alert("Incorrect password");
+    }
+  }
+</script>
